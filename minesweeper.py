@@ -51,7 +51,7 @@ class Minesweeper:
     def on_click(self, r, c):
         if (r, c) in self.mine_positions:
             self.reveal_mines()
-            self.end_game("Game Over!")
+            self.end_game("yor ded")
         else:
             self.reveal_cell(r, c)
 
@@ -116,4 +116,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("Minesweeper")
     game = Minesweeper(root)
+    root.resizable(False, False)
     root.mainloop()
